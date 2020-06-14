@@ -40,7 +40,7 @@
 			<section id="intro" class="main style1 dark fullscreen">
 				<div class="content">
 					<header>
-						<h2>My Online Brand.</h2>
+						<h2><span id="element"></span></h2>
 					</header>
 					<p>Open <i>minded</i> and ready to <strong>learn</strong>. The <mark><b>digital</b></mark> way. </p>
 					<footer>
@@ -171,6 +171,16 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="https://unpkg.com/dev-widget@^1/dist/card.component.min.mjs" type="module"></script>
+			<script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+			<script>
+				new TypeIt("#element", {
+  					speed: 75
+				})
+  					.type("Hello!", {delay: 2000})
+  					.delete(null, {delay: 1000})
+  					.type("This is my online brand!")
+  					.go();
+			  </script>
 
 	</body>
 </html>
